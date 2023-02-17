@@ -1,0 +1,29 @@
+<div
+  style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+  "
+>
+  <div
+    class="text-bg-dark pt-3 px-3 text-center overflow-hidden rounded"
+    *ngFor="let item of categories"
+  >
+    <div class="my-3 py-3">
+      <h2 class="display-5">{{ item.name | titlecase }}</h2>
+      <a routerLink="{{ item.path }}" type="button" class="btn btn-light">
+        Go to {{ item.name }} category
+      </a>
+    </div>
+    <div
+      class="bg-light shadow-sm mx-auto overflow-hidden"
+      style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+    >
+      <img
+        class="w-100 h-100"
+        src="{{ item.img }}"
+        alt="picture for {{ item.name }} category"
+      />
+    </div>
+  </div>
+</div>

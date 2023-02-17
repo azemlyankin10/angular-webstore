@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~swiper/swiper-bundle.min.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.three-line-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.rating {
+  color: rgb(174, 174, 174);
+}
+
+.active-rating {
+  color: rgb(255, 200, 0);
+}

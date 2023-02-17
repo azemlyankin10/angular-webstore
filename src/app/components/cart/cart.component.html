@@ -1,0 +1,30 @@
+<button type="button" class="btn" (click)="modal.visible = true">
+  <mat-icon>shopping_basket</mat-icon>
+</button>
+
+<app-modal-window #modal title="cart">
+  <ul class="list-group mb-5">
+    <div
+      *ngFor="let elem of data"
+      class="list-group-item list-group-item-action"
+    >
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ elem.title }}</h5>
+        <small>{{ elem.price | currency }}</small>
+      </div>
+      <p class="mb-1 three-line-text">{{ elem.description }}</p>
+      <button
+        (click)="removeElemInCart(elem.id)"
+        type="button"
+        class="btn btn-danger btn-sm float-end"
+      >
+        Delete
+      </button>
+    </div>
+  </ul>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-secondary" (click)="modal.hideModal()">
+      Close
+    </button>
+  </div>
+</app-modal-window>
