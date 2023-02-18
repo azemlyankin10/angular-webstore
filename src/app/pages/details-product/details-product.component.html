@@ -1,31 +1,36 @@
 <app-loader [isLoading]="isLoading"></app-loader>
 
 <div class="container mt-4">
-  <div class="row">
-    <div class="col-lg-5">
-      <img [src]="dataCart.image" class="img-fluid" />
+    <div class="row">
+        <div class="col-lg-5">
+            <img [src]="dataCart.image" class="img-fluid" />
+        </div>
+        <div class="col-lg-7">
+            <h1>
+                {{ dataCart.title }}
+                <span class="badge bg-warning">{{
+                    dataCart.category | titlecase
+                }}</span>
+            </h1>
+            <app-rating
+                [maxrating]="5"
+                [selectedrating]="dataCart.rating.rate"
+            ></app-rating>
+            <p>{{ dataCart.description }}</p>
+            <h2>{{ dataCart.price | currency }}</h2>
+            <button
+                [disabled]="isInCart"
+                (click)="addToCart(dataCart.id)"
+                class="btn btn-primary"
+                [ngClass]="{ 'btn-success': isInCart }"
+            >
+                {{
+                    isBtnAddToCardLoading
+                        ? "loading..."
+                        : ((isInCart ? "Added to cart" : "Add to Cart")
+                          | uppercase)
+                }}
+            </button>
+        </div>
     </div>
-    <div class="col-lg-7">
-      <h1>
-        {{ dataCart.title }}
-        <span class="badge bg-warning">{{
-          dataCart.category | titlecase
-        }}</span>
-      </h1>
-      <app-rating
-        [maxRating]="5"
-        [selectedRating]="dataCart.rating.rate"
-      ></app-rating>
-      <p>{{ dataCart.description }}</p>
-      <h2>{{ dataCart.price | currency }}</h2>
-      <button
-        [disabled]="isInCart"
-        (click)="addToCart(dataCart.id)"
-        class="btn btn-primary"
-        [ngClass]="{ 'btn-success': isInCart }"
-      >
-        {{ (isInCart ? "Added to cart" : "Add to Cart") | uppercase }}
-      </button>
-    </div>
-  </div>
 </div>

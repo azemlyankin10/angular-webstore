@@ -5,15 +5,15 @@ import { DetailsCategoryComponent } from './pages/details-category/details-categ
 import { DetailsProductComponent } from './pages/details-product/details-product.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'category/:id', component: DetailsCategoryComponent },
-  { path: 'product/:id', component: DetailsProductComponent },
+    { path: '', component: HomeComponent },
+    { path: 'category/:id', component: DetailsCategoryComponent },
+    { path: 'product/:id', component: DetailsProductComponent },
 
-  { path: '**', component: HomeComponent },
+    { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}

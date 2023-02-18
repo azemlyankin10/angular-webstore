@@ -1,7 +1,9 @@
 <div class="rating">
-  <span class="star" *ngFor="let item of ratingArray; let i = index">
-    <mat-icon class="rating" [ngClass]="{ 'active-rating': i < selectedRating }"
-      >star</mat-icon
-    >
-  </span>
+    <span class="star" *ngFor="let item of ratingArray; let i = index">
+        <mat-icon
+            class="rating"
+            [ngClass]="{ 'active-rating': i < selectedrating }"
+            >star</mat-icon
+        >
+    </span>
 </div>

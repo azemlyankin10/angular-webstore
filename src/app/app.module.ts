@@ -17,22 +17,22 @@ import { LoaderComponent } from './components/ui/loader/loader.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ModalWindowComponent } from './components/ui/modal-window/modal-window.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    DetailsCategoryComponent,
-    HomeComponent,
-    DetailsProductComponent,
-    ProductListComponent,
-    RatingComponent,
-    ProductCardComponent,
-    LoaderComponent,
-    CartComponent,
-    ModalWindowComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, MatIconModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        DetailsCategoryComponent,
+        HomeComponent,
+        DetailsProductComponent,
+        ProductListComponent,
+        RatingComponent,
+        ProductCardComponent,
+        LoaderComponent,
+        CartComponent,
+        ModalWindowComponent,
+    ],
+    imports: [BrowserModule, AppRoutingModule, MatIconModule, HttpClientModule],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

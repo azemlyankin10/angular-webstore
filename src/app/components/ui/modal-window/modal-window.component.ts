@@ -1,23 +1,23 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-modal-window',
-  templateUrl: './modal-window.component.html',
-  styleUrls: ['./modal-window.component.scss'],
+    selector: 'app-modal-window',
+    templateUrl: './modal-window.component.html',
+    styleUrls: ['./modal-window.component.scss'],
 })
 export class ModalWindowComponent {
-  @Input() title = 'Modal Title';
-  @Input() visible = false;
+    @Input() title = '';
+    @Input() visible = false;
 
-  hideModal() {
-    this.visible = false;
-  }
+    hideModal() {
+        this.visible = false;
+    }
 
-  openModal() {
-    this.visible = true;
-  }
+    openModal() {
+        this.visible = true;
+    }
 
-  stopPropagation(e: MouseEvent) {
-    e.stopPropagation();
-  }
+    stopPropagation(e: MouseEvent) {
+        e.stopPropagation();
+    }
 }

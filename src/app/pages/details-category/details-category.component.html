@@ -1,45 +1,45 @@
 <app-loader [isLoading]="isLoading"></app-loader>
 
 <div>
-  <h1 class="text-center mb-3">{{ title | titlecase }}</h1>
-  <div
-    style="
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-      gap: 20px;
-    "
-    class="mb-5"
-  >
-    <app-product-card
-      *ngFor="let card of data"
-      [cardData]="card"
-    ></app-product-card>
-  </div>
+    <h1 class="text-center mb-3">{{ title | titlecase }}</h1>
+    <div
+        style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            gap: 20px;
+        "
+        class="mb-5"
+    >
+        <app-product-card
+            *ngFor="let card of data"
+            [cardData]="card"
+        ></app-product-card>
+    </div>
 
-  <div class="container">
-    <h3>Another products</h3>
-    <div class="swiper-container overflow-hidden">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let card of caruselData">
-          <app-product-card [cardData]="card"></app-product-card>
+    <div class="container">
+        <h3>Another products</h3>
+        <div class="swiper-container overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let card of caruselData">
+                    <app-product-card [cardData]="card"></app-product-card>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="text-end mt-3">
+            <div class="btn-group" role="group" aria-label="carusel controls">
+                <button
+                    type="button"
+                    class="btn-back btn btn-outline-primary d-flex justify-content-center align-items-center"
+                >
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <button
+                    type="button"
+                    class="btn-forward btn btn-outline-primary d-flex justify-content-center align-items-center"
+                >
+                    <mat-icon>arrow_forward</mat-icon>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="text-end mt-3">
-      <div class="btn-group" role="group" aria-label="carusel controls">
-        <button
-          type="button"
-          class="btn-back btn btn-outline-primary d-flex justify-content-center align-items-center"
-        >
-          <mat-icon>arrow_back</mat-icon>
-        </button>
-        <button
-          type="button"
-          class="btn-forward btn btn-outline-primary d-flex justify-content-center align-items-center"
-        >
-          <mat-icon>arrow_forward</mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
 </div>

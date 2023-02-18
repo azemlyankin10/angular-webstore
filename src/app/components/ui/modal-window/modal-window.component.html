@@ -1,24 +1,24 @@
 <div
-  *ngIf="visible"
-  class="modal d-block"
-  style="background-color: rgba(0, 0, 0, 0.651)"
-  tabindex="-1"
-  (click)="hideModal()"
+    *ngIf="visible"
+    class="modal d-block"
+    style="background-color: rgba(0, 0, 0, 0.651)"
+    tabindex="-1"
+    (click)="hideModal()"
 >
-  <div class="modal-dialog" (click)="stopPropagation($event)">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{ title | titlecase }}</h5>
-        <button
-          type="button"
-          class="btn-close"
-          aria-label="Close"
-          (click)="hideModal()"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <ng-content></ng-content>
-      </div>
+    <div class="modal-dialog" (click)="stopPropagation($event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ title | titlecase }}</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                    (click)="hideModal()"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <ng-content></ng-content>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
